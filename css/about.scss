@@ -1,0 +1,263 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+html
+{
+    width:100%;
+    height:100%;
+}
+body
+{
+    width:100%;
+    height:100%;
+    font-weight: 400;
+    background:white;
+    positions: relative;
+    font-family: "Microsoft YaHei",Helvetia,"lucida Grande",Verdana,Arial,sans-serif;
+    font-weight: 400;
+}
+.Team{
+    width:900px;
+    margin:auto;
+    position:relative;
+    h1{
+        padding-top:50px;
+    }
+    height:350px;
+}
+li {
+    list-style: none;
+}
+.aboutiMovie{
+    width:900px;
+    margin:auto;
+    position:relative;
+    h1{
+        padding-top:50px;
+         font-size:1.5em;
+        color:#00a381;
+    }
+    height:400px;
+    .left{
+        width:700px;
+        .iMovieContent{
+            position:absolute;
+            left:0;
+            width:300px;
+            .descriptioniMovies{
+                 font-weight:normal;
+                 font-size:0.8em;
+            }
+
+        }
+        #echarts{
+            position:absolute;
+            left:340px;
+            width:320px;
+            height: 280px;
+            background:grey;
+        }
+    }
+    .right{
+        wigth:200px;
+        left:700px;
+        text-align:center;
+        right:0px;
+        .QC{
+            //width:200px;
+            p{
+                padding-top:1.17em;
+                font-weight:normal;
+                 font-size:1em;
+            }
+
+        }
+    }
+}
+.left{
+    position:absolute;
+    top:100px;
+    left:0;
+
+}
+.right{
+    position:absolute;
+    top:100px;
+    left:450px;
+}
+
+.container_top,td
+{
+    display: -webkit-flex;
+    display: flex;
+    width:450px;
+    /*margin: auto auto;*/
+    -webkit-justify-content: center;
+            justify-content: center;
+    -webkit-align-items: center;
+            align-items: center;
+}
+#author{
+    color:#979696;
+     font-size:1.5em;
+    font-style: normal;
+    line-height: 36px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+#description{
+    font-family: Cursive,Georgia,Calibri,"Lucida Grande",arial,sans-serif;
+    color:#000;
+     font-size:1em;
+    line-height: 36px;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight:100;
+}
+.en {
+    font-family: Georgia,Calibri,"Lucida Grande",arial,sans-serif;
+    color:#575656;
+     font-size:0.7em;
+}
+.container_down
+{
+    max-width:600px;
+    margin: 0 auto;
+}
+.container_down ul{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.container_down li{
+    padding: 10px;
+}
+
+.flexitem-left
+{
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    text-align: center;
+}
+.flexitem-right
+{
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.flexitem-right li{
+    padding: 10px;
+}
+li .icon{
+    width:32px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 50%;
+
+}
+li .icon.github{
+     background-image: url("../img/iconfont-github.svg");
+ }
+li .icon.weibo{
+    background-image: url("../img/iconfont-sinaweiboc.svg");
+}
+li .icon.douban{
+    background-image: url("../img/iconfont-douban.svg");
+}
+li .icon.mail{
+    background-image: url("../img/iconfont-mail.svg");
+}
+.icon:hover{
+    border-radius:50%;
+    box-shadow: 2px 2px  #444444;
+    /*background-color: aqua;*/
+}
+#photoLxj{
+    height:150px;
+    width:150px;
+    background-image: url("../img/nlmz2.jpg");
+    border-radius:50%;
+    -webkit-background-size:150px 150px;
+    transition: transform 2s,background-image 2s;
+    -webkit-transition: transform 2s,background-image 2s;;
+}
+#photoLxj:hover{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    background-image:url("../img/lxj.jpg")
+}
+
+#photoYll{
+    height:150px;
+    width:150px;
+    background-image: url("../img/pig.jpg");
+    border-radius:50%;
+    -webkit-background-size:150px 150px;
+    transition: transform 2s,background-image 2s;
+    -webkit-transition: transform 2s,background-image 2s;;
+}
+#photoYll:hover{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    background-image:url("../img/yll.jpg")
+}
+
+@media screen and (min-width:900px){
+    .flexitem-left{
+        margin-right:50px;
+    }
+    .flexitem-right{
+        margin-left:50px;
+    }
+    .container_down {
+        margin-top:10px;
+        margin-bottom: 30px;
+    }
+    .en{
+        margin: 15px;
+    }
+
+
+}
+//@media screen and (max-width: 599px){
+//    .container_top{
+//        flex-direction: column;
+//        margin-bottom: 30px;
+//    }
+//    .flexitem-left{
+//        margin-bottom: 20px;
+//
+//    }
+//
+//    .flexitem-right ul{
+//        display: -webkit-flex;
+//        display: flex;
+//        flex-direction: row;
+//    }
+//    .task{
+//        display: -webkit-flex;
+//        display: flex;
+//        flex-direction: column;
+//        -webkit-justify-content: center;
+//        justify-content: center;
+//        -webkit-align-items: center;
+//        align-items: center;
+//        width:120px;
+//    }
+//    .zh,.en{
+//        padding:5px;
+//    }
+//    .container_down li{
+//        display: inline;
+//    }
+//
+//}

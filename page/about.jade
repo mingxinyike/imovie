@@ -1,0 +1,82 @@
+extends head
+block specialHead
+    link(rel="stylesheet" href="../css/about.css")
+    script(src="http://echarts.baidu.com/build/dist/echarts.js")
+    script(src="../js/about.js")
+block content
+        .Team
+            div.container_top.left
+                div.flexitem-left
+                    div#photoLxj
+                    p#author 刘小婧
+                    p#description You belong to me
+                div#flexitem-right
+                    ul
+                        li
+                            a.task
+                                span.zh 博客
+                                span.en BLOG
+                        li
+                            a.task
+                                span.zh 关于我
+                                span.en ABOUT ME
+                        li
+                            a.task
+                                span.zh 项目
+                                span.en PROJECT
+                                div.container_down
+                                    ul
+                                        li
+                                            a(class="icon github" href="https://github.com/mingxinyike" target="_black" title="Follow me on github")
+                                        li
+                                            a(class="icon weibo" href="http://weibo.com/u/2377335361" target="_black" title="Follow me on weibo")
+                                        li
+                                            a(class="icon douban" href="http://www.douban.com/people/65403916/" target="_black" title="Follow me on douban")
+                                        li
+                                            a(class="icon mail" href="mailto:liuxiaojing@whu.edu.cn" target="_black" title="Follow me on douban")
+            div.container_top.right
+                div.flexitem-left
+                    div#photoYll
+                    p#author 杨龙龙
+                    p#description from map to map
+                div#flexitem-right
+                    ul
+                        li
+                            a.task
+                                span.zh 博客
+                                span.en BLOG
+                        li
+                            a.task
+                                span.zh 关于我
+                                span.en ABOUT ME
+                        li
+                            a.task
+                                span.zh 项目
+                                span.en PROJECT
+                        div.container_down
+                            ul
+                                li
+                                    a(class="icon github" href="https://github.com/yllziv" target="_black" title="Follow me on github")
+                                li
+                                    a(class="icon weibo" href="http://weibo.com/3169496351/profile?topnav=1&wvr=6" target="_black" title="Follow me on weibo")
+                                li
+                                    a(class="icon douban" href="http://www.douban.com/people/ziv_yll/" target="_black" title="Follow me on douban")
+                                li
+                                    a(class="icon mail" href="mailto:yll.ziv@gmail.com" target="_black" title="Follow me on douban")
+        .aboutiMovie
+            h1 iMovie小站
+            div.left
+                .iMovieContent
+                    .descriptioniMovies
+                        p <strong>数据来源：</strong>通过java的HTTPClient爬取豆瓣电影，Jsoup进行解析
+                        p <strong>数据库：</strong>采用开源数据库PostgreSQL
+                        p <strong>后台：</strong>采用Nodejs的Express框架
+                        p <strong>前端：</strong>html采用jade模版，css采用sass模版，javascript采用jquery库
+                        p <strong>版本管理：</strong>采用Git进行版本的更新与修改
+                        p <strong>服务器：</strong>使用Nginx代理转发请求到对应NodeJs服务上
+                div#echarts
+            div.right
+                .QC
+                    img(src="../img/weixin.jpg" width="200px")
+                    p 微信公众号  Ziv小站
+                div.technology

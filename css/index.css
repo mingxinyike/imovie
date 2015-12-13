@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Lucida Handwriting";
+  src: url("LHANDW.TTF") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(-65deg); }
+  to {
+    -webkit-transform: rotate(0deg); } }
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+  * a:hover {
+    text-decoration: none; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  position: relative;
+  background-image: url(../img/bg1.jpg);
+  background-size: 100% 100%; }
+
+#title {
+  position: absolute;
+  left: 8%;
+  top: 5%; }
+  #title span {
+    padding-left: 20px;
+    font-family: YouYuan;
+    font-size: 0.2em; }
+
+#oneWord {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  width: 500px; }
+  #oneWord p {
+    font-size: 1em;
+    font-family: "Lucida Handwriting",Arial; }
+  #oneWord p + p {
+    padding-left: 60%;
+    padding-top: 5px; }
+  #oneWord p + p + p {
+    padding-left: 80%; }
+
+.logo {
+  font-size: 5em;
+  font-family: Axure "Axure Handwriting";
+  font-weight: bold; }
+
+#enter {
+  position: absolute;
+  right: 30%;
+  top: 20%;
+  cursor: pointer; }
+  #enter span {
+    position: relative;
+    top: -30px;
+    font-size: 2em;
+    font-family: Axure "Axure Handwriting"; }
+  #enter img {
+    animation: 2s linear 0s normal none infinite rotate; }
+
+/*# sourceMappingURL=index.css.map */

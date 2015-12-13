@@ -1,0 +1,50 @@
+extends head
+block specialHead
+    link(type="text/css", rel="stylesheet", href="../css/guess.css")
+    link(rel='stylesheet' href='../css/daily.css')
+    script(src='http://echarts.baidu.com/build/dist/echarts.js')
+    script(src="../js/convertPinyin.js")
+    script(src="../js/daily.js")
+    script(src="../js/rank.js")
+
+block content
+    body
+        div.top
+            h1 根据地区/天气/心情给你推荐几部好片~
+        div#mood
+
+        div#movie
+            div.listHead
+                span 在
+                span(class="city strong")
+                span 这个
+                span(class="weather strong")
+                span 天听说你心里
+                span(class="strong mood") 开心
+                span 了？给您推荐看几部电影看看
+        .main
+            #MovieList
+                mixin movietbody
+                    table
+                        tbody
+                            tr
+                                td
+                                    a
+                                        img.moviepic(src="../img/hachi.jpg" width="100px" height="140px")
+                                td
+                                    .Mdescription
+                                        h4.title 布达佩斯大饭店 The Grand Budapest Hotel
+                                        a.douban
+                                            img(src="../img/douban.png" width="30px" height="30px")
+                                        a.imdb
+                                            img(src="../img/imbd.jpg" width="30px" height="30px")
+                                        p.content   "2014-02-06(柏林电影节) / 2014-03-28(美国)\r韦斯·安德森\r拉尔夫·费因斯 / 托尼·雷沃罗利 / 艾德里安·布洛迪 / 威廉·达福 / 裘德·洛 / 更多...\r100分钟\r"
+                                        span.rateStar
+                                        span.rating
+                                        span.evaluation
+                -for (var i = 0; i < 10 ;i++){
+                    p.dotline
+                    +movietbody()
+                -}
+                .page
+                    ul.paginations

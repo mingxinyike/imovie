@@ -1,0 +1,28 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: #white; }
+  body .top {
+    height: 3em;
+    text-align: left; }
+    body .top h1 {
+      font-family: STKaiti   !important;
+      padding-top: 0.5em;
+      padding-left: 1em;
+      color: #887f7a;
+      font-size: 1.5em; }
+  body #mood {
+    width: 100%;
+    height: 20em;
+    border: solid 2px #b6ffb9; }
+  body #movie {
+    text-align: center; }
+    body #movie .listHead {
+      font-family: YouYuan !important;
+      margin: 1em; }
+      body #movie .listHead .strong {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #00a3af; }
+
+/*# sourceMappingURL=daily.css.map */

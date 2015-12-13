@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Microsoft YaHei"; }
+
+body {
+  width: 100%; }
+  body .pageHead {
+    background-image: url("../img/indexBg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 6em;
+    height: 6em;
+    width: 100%;
+    border-bottom: solid #165c69 0.3em; }
+    body .pageHead #title {
+      position: absolute;
+      top: 0.5em;
+      left: 2em; }
+      body .pageHead #title p span {
+        padding-left: 20px;
+        font-family: "Arial";
+        font-size: 0.3em; }
+    body .pageHead .logo {
+      font-size: 5em;
+      font-family: Axure "Axure Handwriting";
+      font-weight: bold;
+      color: #164a84; }
+    body .pageHead .headList {
+      float: left;
+      position: absolute;
+      right: 1em;
+      top: 2.5em; }
+      body .pageHead .headList span {
+        margin-right: 1.4em;
+        padding-bottom: 0.99em;
+        width: 4em;
+        text-align: center;
+        font-size: 1.5em;
+        color: #fff;
+        cursor: pointer; }
+      body .pageHead .headList span:hover {
+        border-bottom: 0.25em solid #204a91;
+        color: #204a91; }
+      body .pageHead .headList .clickColor {
+        border-bottom: 0.25em solid #204a91;
+        color: #204a91; }
+  body .pageBody {
+    width: 100%; }
+    body .pageBody iframe {
+      width: 100%; }
+  body .pageFoot {
+    position: relative;
+    height: 3em;
+    width: 100%; }
+    body .pageFoot div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      text-align: center; }
+      body .pageFoot div a {
+        cursor: hand;
+        margin-right: 1em; }
+      body .pageFoot div p {
+        margin-bottom: 1em; }
+      body .pageFoot div span {
+        top: 0;
+        position: absolute;
+        right: 1em; }
+
+/*# sourceMappingURL=head.css.map */

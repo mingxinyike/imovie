@@ -1,0 +1,130 @@
+extends head
+block specialHead
+    link(type="text/css", rel="stylesheet", href="../css/search.css")
+    script(src="../js/search.js")
+    script(src="../js/recommend.js")
+block content
+    .selectItems
+        .oneselect.movietypeSelect
+            span 类型
+            a
+        .oneselect.movielanguageSelect
+            span 语言
+            a
+        .oneselect.movietimeSelect
+            span 上映时间
+            a
+        .oneselect.doubanstarSelect
+            span 豆瓣评分多少以上
+            a
+        .oneselect.submitlist
+            span submit
+        .downlist.movietype
+            ul
+                //li 不限
+                li 剧情
+                li 喜剧
+                li 动作
+                li 科幻
+                li 犯罪
+                li 动画
+                li 惊悚
+                li 爱情
+                li 灾难
+        .downlist.movielanguage
+            ul
+                //li 不限
+                li 英语
+                li 普通话
+                li 粤语
+                li 韩语
+                li 日语
+                li 法语
+                li 俄语
+                li 德语
+                li 西班牙语
+        .downlist.movietime
+            ul.movietimeul
+                - for (var i = 2015; i > 1888; --i ){
+                    li #{i}
+                - }
+        .downlist.doubanstar
+            ul
+                li 9
+                li 8
+                li 7
+                li 6
+                li 5
+                li 4
+                li 3
+    #errorAlert
+        h1 Sorry，没有找到匹配的电影。。。。。。
+        a.return(title="返回")
+            img(src="../img/return.svg" width="50px")
+    .main
+        #header
+            h1#h1 爱情片?
+                span.more.lovemore More...
+        #choose_movie.loveType
+            mixin list
+                .line
+                    -for (var i = 0; i < 5; i++){
+                        .movieblock
+                    -}
+            +list()
+        #header
+            h1#h1 惊悚片?
+                span.more.horrormore More...
+        #choose_movie.horrorType
+            +list()
+        #header
+            h1#h1 搞笑片?
+                span.more.funnymore More...
+        #choose_movie.funnyType
+            +list()
+        #header
+            h1#h1 动作片?
+                span.more.actionmore More...
+        #choose_movie.actionType
+            +list()
+        #header
+            h1#h1 科幻片?
+                span.more.sciencemore More...
+        #choose_movie.scienceType
+            +list()
+        #header
+            h1#h1 动画片?
+                span.more.cartoonmore More...
+        #choose_movie.cartoonType
+            +list()
+    .recommendlist
+        #MovieList
+            mixin movietbody
+                table
+                    tbody
+                        tr
+                            td
+                                a
+                                    img.moviepic(width="100px" height="140px")
+                            td
+                                .Mdescription
+                                    h4.title
+                                    a.douban
+                                        img(src="../img/douban.png" width="30px" height="30px")
+                                    a.imdb
+                                        img(src="../img/imbd.jpg" width="30px" height="30px")
+                                    p.content
+                                    span.rateStar
+                                    span.rating
+                                    span.evaluation
+            -for (var i = 0; i < 10 ;i++){
+                p.dotline
+                +movietbody()
+            -}
+            .page
+                ul.paginations
+                a.return(title="返回")
+                    img(src="../img/return.svg" width="50px")
+script(src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js")
+script(src="../js/recommend.js")
+script(src="../js/SearchMovie.js")

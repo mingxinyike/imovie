@@ -1,0 +1,55 @@
+extends head
+block specialHead
+    link(type="text/css", rel="stylesheet", href="../css/guess.css")
+    script(src="../js/recommend.js")
+    script(src="../js/guess.js")
+block content
+        .main
+            #header
+                h1#h1 选择你喜爱的电影
+                h1#h2 共选中
+                    span#loveCount 0
+                    span 部
+
+            #choose_movie
+                mixin list
+                    .line
+                        -for (var i = 0; i < 5; i++){
+                            .movieblock
+                        -}
+                +list()
+                +list()
+                +list()
+                .page1btn
+                    button(type="submit")#submitLove  提交
+                    button(type="submit")#reset  不够选？再来一波
+             #MovieList
+                 mixin movietbody
+                     table
+                         tbody
+                             tr
+                                 td
+                                     a
+                                         img.moviepic(src="../img/hachi.jpg" width="100px" height="140px")
+                                 td
+                                     .Mdescription
+                                         h4.title 布达佩斯大饭店 The Grand Budapest Hotel
+                                         a.douban
+                                             img(src="../img/douban.png" width="30px" height="30px")
+                                         a.imdb
+                                             img(src="../img/imbd.jpg" width="30px" height="30px")
+                                         p.content   "2014-02-06(柏林电影节) / 2014-03-28(美国)\r韦斯·安德森\r拉尔夫·费因斯 / 托尼·雷沃罗利 / 艾德里安·布洛迪 / 威廉·达福 / 裘德·洛 / 更多...\r100分钟\r"
+                                         span.rateStar
+                                         span.rating
+                                         span.evaluation
+                 -for (var i = 0; i < 10 ;i++){
+                    p.dotline
+                    +movietbody()
+                 -}
+                 .page
+                     ul.paginations
+
+
+
+
+

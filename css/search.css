@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Microsoft YaHei"; }
+  * ul, * li {
+    list-style: none; }
+  * a {
+    text-decoration: none; }
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.selectItems {
+  position: relative;
+  width: 900px;
+  height: 100px;
+  margin: auto;
+  background: #a3a3a2;
+  display: flex;
+  fkex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .selectItems .oneselect {
+    font-family: "Helvetica Neue", Helvetica,"microsoft yahei", Arial, sans-serif;
+    position: relative;
+    width: 170px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 36px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    height: 36px;
+    padding: 0 5px 0 0;
+    margin: 0 8px 0 0; }
+    .selectItems .oneselect span {
+      cursor: pointer;
+      display: inline-block;
+      width: 170px;
+      padding: 0 30px 0 10px; }
+    .selectItems .oneselect a {
+      position: absolute;
+      display: inline-block;
+      top: 5px;
+      right: 5px;
+      width: 24px;
+      height: 24px;
+      border-radius: 40px;
+      background: #00a381 url("../img/triangle.png") no-repeat -212px -110px; }
+      .selectItems .oneselect a:hover {
+        background: #006e54 url("../img/triangle.png") no-repeat -212px -110px; }
+  .selectItems .submitlist {
+    width: 80px;
+    text-align: center;
+    color: white;
+    background: #00a381; }
+    .selectItems .submitlist span {
+      width: 60px; }
+    .selectItems .submitlist:hover {
+      box-shadow: 1px 1px 2px gray; }
+  .selectItems .downlist {
+    display: none;
+    background: #fff;
+    width: 180px;
+    position: absolute;
+    top: 70px;
+    left: 5px;
+    border: 1px solid #ebebeb;
+    box-shadow: 1px 1px 3px #ebebeb;
+    padding: 3px 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000; }
+    .selectItems .downlist li {
+      padding: 5px; }
+      .selectItems .downlist li:hover {
+        background-color: rgba(56, 180, 139, 0.5); }
+  .selectItems .movielanguage {
+    left: 200px; }
+  .selectItems .movietime {
+    left: 400px; }
+    .selectItems .movietime ul {
+      height: 300px;
+      overflow-y: scroll; }
+  .selectItems .doubanstar {
+    left: 600px; }
+
+#errorAlert {
+  position: relative;
+  width: 900px;
+  height: 100px;
+  padding: 20px;
+  margin: auto;
+  display: none; }
+  #errorAlert .return {
+    position: absolute;
+    top: 0px;
+    right: 10px; }
+
+.main {
+  width: 900px;
+  margin: auto; }
+  .main #header {
+    width: 750px;
+    position: relative;
+    margin: 20px auto; }
+    .main #header #h1 {
+      font-size: 1.3em; }
+    .main #header span {
+      padding-left: 20px;
+      font-family: Verdana Georgia Arial;
+      font-size: 0.7em;
+      font-weight: normal;
+      cursor: pointer; }
+      .main #header span:hover {
+        font-weight: bold; }
+  .main #choose_movie {
+    width: 750px;
+    margin: auto; }
+    .main #choose_movie .line {
+      width: 750px;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: stretch; }
+    .main #choose_movie .movieblock {
+      width: 150px;
+      height: 200px;
+      position: relative;
+      text-align: center; }
+      .main #choose_movie .movieblock p a {
+        color: black;
+        font-size: 14px; }
+      .main #choose_movie .movieblock p + a {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        background: #00a381;
+        color: orange;
+        font-size: 1.2em;
+        font-weight: bold; }
+    .main #choose_movie .page1btn {
+      width: 750px;
+      position: relative;
+      text-align: center; }
+      .main #choose_movie .page1btn #submitLove {
+        width: 140px; }
+      .main #choose_movie .page1btn #reset {
+        position: absolute;
+        right: 20px; }
+      .main #choose_movie .page1btn button {
+        cursor: pointer;
+        margin: 0 20px 20px 0;
+        margin-top: 30px;
+        line-height: 38px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px #333;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid #1e7db9;
+        box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+        background: -webkit-linear-gradient(top, #42a4e0, #2e88c0);
+        background: -moz-linear-gradient(top, #42a4e0, #2e88c0);
+        background: linear-gradient(top, #42a4e0, #2e88c0);
+        padding: 0 10px; }
+
+.recommendlist {
+  display: none;
+  width: 900px;
+  margin: auto; }
+  .recommendlist #MovieList {
+    width: 750px;
+    margin: auto; }
+    .recommendlist #MovieList .dotline {
+      display: block;
+      border-bottom: 1px dashed #ddd;
+      line-height: 100%;
+      margin: 10px; }
+    .recommendlist #MovieList table td {
+      position: relative; }
+      .recommendlist #MovieList table td .Mdescription {
+        width: 600px !important;
+        padding-left: 40px; }
+        .recommendlist #MovieList table td .Mdescription .douban {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          cursor: pointer; }
+        .recommendlist #MovieList table td .Mdescription .imdb {
+          position: absolute;
+          bottom: 0;
+          right: 40px;
+          cursor: pointer; }
+        .recommendlist #MovieList table td .Mdescription .rateStar {
+          display: inline-block;
+          height: 11px;
+          line-height: 12px;
+          width: 100px;
+          background-image: url("../img/stars.png");
+          background-position: 0 -110px;
+          background-repeat: no-repeat; }
+        .recommendlist #MovieList table td .Mdescription h4 {
+          color: #f08300; }
+        .recommendlist #MovieList table td .Mdescription p {
+          padding-top: 10px;
+          line-height: 1.5em;
+          font-size: 0.8em; }
+          .recommendlist #MovieList table td .Mdescription p span {
+            font-weight: bold;
+            font-size: 1em;
+            color: #006e54; }
+        .recommendlist #MovieList table td .Mdescription .rating, .recommendlist #MovieList table td .Mdescription .evaluation {
+          font-size: 0.8em; }
+    .recommendlist #MovieList ul {
+      margin: 3em;
+      text-align: center; }
+      .recommendlist #MovieList ul #First, .recommendlist #MovieList ul #Previous, .recommendlist #MovieList ul #Next, .recommendlist #MovieList ul #Last {
+        width: 40px; }
+      .recommendlist #MovieList ul li {
+        display: inline-block;
+        color: #59b9c6;
+        cursor: pointer; }
+        .recommendlist #MovieList ul li:hover {
+          background: #59b9c6;
+          color: #FFF; }
+      .recommendlist #MovieList ul .disabled {
+        cursor: not-allowed; }
+      .recommendlist #MovieList ul .active {
+        color: #000000; }
+    .recommendlist #MovieList .page {
+      position: relative;
+      width: 100%;
+      margin: auto; }
+      .recommendlist #MovieList .page .return {
+        cursor: pointer;
+        position: absolute;
+        top: -10px;
+        right: 20px; }
+
+/*# sourceMappingURL=search.css.map */
